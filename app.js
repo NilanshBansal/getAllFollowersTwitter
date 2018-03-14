@@ -14,7 +14,6 @@ let appConfig = new Twit({
 let nextCursor = -1;
 let remaining;
 let timestamp;
-let curTimestamp;
 function bringFollowers() {
   appConfig.get('/followers/list', { cursor: nextCursor, screen_name: 'rajesh664', count: 200, skip_status: true, include_user_entities: false }, function (err, data, res) {
     remaining = res.caseless.dict['x-rate-limit-remaining'];
